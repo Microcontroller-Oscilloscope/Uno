@@ -25,7 +25,7 @@
 ; https://docs.platformio.org/page/projectconf.html
 
 [platformio]
-default_envs = test_env
+default_envs = uno
 
 [env]
 platform = atmelavr
@@ -40,7 +40,7 @@ build_flags =
 	;-D __NVM_COMMIT__ ; Calls commit function for NVM
 
 lib_deps =
-;	https://github.com/Microcontroller-Oscilloscope/Core
+	https://github.com/Microcontroller-Oscilloscope/Core
 
 [env:uno]
 build_type = release
@@ -70,4 +70,4 @@ build_flags =
 lib_deps =
 	${env.lib_deps}
 
-;	https://github.com/Microcontroller-Oscilloscope/UnityTests
+	https://github.com/Microcontroller-Oscilloscope/UnityTests
