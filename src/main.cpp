@@ -19,30 +19,9 @@
 #include "main.h"
 
 void setup() {
-
-	Serial.begin(BAUD_RATE);
-	delay(3000);
-
-	nvmInit(NVM_SIZE);
+	startProgram();
 }
 
-#define I8KEY 4
-
 void loop() {
-
-	
-	int64_t i8val = 20;
-	int64_t i8valr;
-
-	nvmWriteValue(I8KEY, i8val);
-	nvmGetValue(I8KEY, &i8valr);
-
-	delay(5000);
-
-	i8val = 35;
-
-	nvmWriteValue(I8KEY, i8val);
-	nvmGetValue(I8KEY, &i8valr);
-
-	delay(5000);
+	runProgram();
 }
