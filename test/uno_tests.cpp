@@ -16,11 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#ifdef __TEST_CASES__
-
-#include <nvm_tests/nvm_tests.h>
 #include <full_test.h>
-#include "board_consts.h"
 
 void setUp(void) {
 	// set stuff up here
@@ -32,23 +28,13 @@ void tearDown(void) {
 
 int runUnityTests(void) {
 	UNITY_BEGIN();
-
-	setupNVMTests(NVM_SIZE);
-
-	//RUN_TEST(&testNVMInit);
-	//RUN_TEST(&testNVMInit);
-	RUN_TEST(&fullTest);
-
+	fullTest();
 	return UNITY_END();
 }
 
 void setup() {
-
 	delay(SERIAL_DELAY);
-
 	runUnityTests();
 }
 
 void loop() {}
-
-#endif
